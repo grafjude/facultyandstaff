@@ -30,6 +30,7 @@ UIViewController, UITableViewDataSource, UITableViewDelegate
                     return facultyStaff.count
                 }
     
+    
             func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
                 {
                     let cell=UITableViewCell()
@@ -39,10 +40,13 @@ UIViewController, UITableViewDataSource, UITableViewDelegate
                     cell.textLabel?.text=facultyStaff[indexPath.row]
                     return cell
                 }
-            func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-                {
-                    performSegue(withIdentifier: "teachersDepartment", sender: "Teachers")
-                }
+    
+            func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+                performSegue(withIdentifier: "teachersDepartment", sender: "Teachers")
+            }
+    
+            
+    
     
     
     override func didReceiveMemoryWarning()

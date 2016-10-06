@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Facultyandstaff" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,60 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mi1-yc-KrZ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mi1-yc-KrZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tgk-fF-MPo"/>
+                            <constraint firstItem="mi1-yc-KrZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dQh-TP-d5I"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mi1-yc-KrZ" secondAttribute="bottom" id="hew-Ss-lE5"/>
+                            <constraint firstAttribute="trailing" secondItem="mi1-yc-KrZ" secondAttribute="trailing" id="oJd-kT-2iY"/>
+                            <constraint firstItem="mi1-yc-KrZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zZf-ex-sgI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="facultystaffTable" destination="mi1-yc-KrZ" id="Z81-jT-n3p"/>
+                        <segue destination="PNW-0S-8NV" kind="presentation" identifier="teachersDepartment" id="UDG-zk-e0N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fiA-uc-037">
+            <objects>
+                <viewController id="PNW-0S-8NV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WCX-oV-Bhm"/>
+                        <viewControllerLayoutGuide type="bottom" id="mK9-4G-qvZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9TQ-Sb-UGx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FPC-Yl-Z7M">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FPC-Yl-Z7M" firstAttribute="top" secondItem="WCX-oV-Bhm" secondAttribute="bottom" id="68b-AW-jo4"/>
+                            <constraint firstItem="FPC-Yl-Z7M" firstAttribute="centerX" secondItem="9TQ-Sb-UGx" secondAttribute="centerX" id="EGS-nw-ZD8"/>
+                            <constraint firstAttribute="trailing" secondItem="FPC-Yl-Z7M" secondAttribute="trailing" id="Kjo-Zf-Jqp"/>
+                            <constraint firstItem="FPC-Yl-Z7M" firstAttribute="leading" secondItem="9TQ-Sb-UGx" secondAttribute="leading" id="bQV-qT-RcT"/>
+                            <constraint firstItem="mK9-4G-qvZ" firstAttribute="top" secondItem="FPC-Yl-Z7M" secondAttribute="bottom" id="gLX-PM-NMu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="view" destination="FPC-Yl-Z7M" id="ISx-vQ-2sU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMT-Y4-6RN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="87"/>
         </scene>
     </scenes>
 </document>

@@ -15,7 +15,7 @@ UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var facultystaffTable: UITableView!
     
     
-    var facultyStaff=["Teachers"]
+    var facultyStaff=["Mrs. Maciulewicz", "Mr. O'Hara", "Mrs. Jeffcoat", "Ms. Bell", "Mrs. Thompson", "6", "7", "8" ,"9", "10" ]
     var teachersDepartment=["English", "Math", "Science", "History", "Religion" ]
    
     override func viewDidLoad()
@@ -42,7 +42,7 @@ UIViewController, UITableViewDataSource, UITableViewDelegate
                 }
     
             func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-                performSegue(withIdentifier: "teachersDepartment", sender: "Teachers")
+                performSegue(withIdentifier: "teachersDepartment", sender: "facultyStaff")
             }
     
             

@@ -53,17 +53,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FPC-Yl-Z7M">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👾" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaD-NI-b7r">
+                                <fontDescription key="fontDescription" type="system" pointSize="166"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FPC-Yl-Z7M" firstAttribute="top" secondItem="WCX-oV-Bhm" secondAttribute="bottom" id="68b-AW-jo4"/>
-                            <constraint firstItem="FPC-Yl-Z7M" firstAttribute="centerX" secondItem="9TQ-Sb-UGx" secondAttribute="centerX" id="EGS-nw-ZD8"/>
-                            <constraint firstAttribute="trailing" secondItem="FPC-Yl-Z7M" secondAttribute="trailing" id="Kjo-Zf-Jqp"/>
-                            <constraint firstItem="FPC-Yl-Z7M" firstAttribute="leading" secondItem="9TQ-Sb-UGx" secondAttribute="leading" id="bQV-qT-RcT"/>
-                            <constraint firstItem="mK9-4G-qvZ" firstAttribute="top" secondItem="FPC-Yl-Z7M" secondAttribute="bottom" id="gLX-PM-NMu"/>
+                            <constraint firstItem="HaD-NI-b7r" firstAttribute="top" secondItem="WCX-oV-Bhm" secondAttribute="bottom" constant="80" id="M3G-S4-Mhv"/>
+                            <constraint firstItem="HaD-NI-b7r" firstAttribute="centerX" secondItem="9TQ-Sb-UGx" secondAttribute="centerX" id="b9G-Bx-9yo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xoo-W0-2EV"/>
